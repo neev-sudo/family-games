@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  padding: 32px 20px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.container {
+  width: min(900px, 92%);
+  margin: 32px auto;
+}
+
+h2 {
+  text-align: center;
+  color: #312e81;
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.game-card {
+  min-height: 210px;
+  padding: 24px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  color: #1f2937;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  border-color: #6366f1;
+  transform: translateY(-4px);
+}
+
+.game-card strong,
+.game-card small {
+  display: block;
+}
+
+.game-card strong {
+  margin: 12px 0 8px;
+  font-size: 1.2rem;
+}
+
+.game-card small {
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.game-icon {
+  font-size: 2.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#setup-screen {
+  max-width: 650px;
+  margin: auto;
+  padding: 24px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#setup-screen h2 {
+  margin-top: 20px;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.category-option {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+
+label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+  margin-top: 20px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-button {
+  width: 100%;
+  background: #4f46e5;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #3730a3;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.message {
+  min-height: 24px;
+  color: #4f46e5;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  padding: 20px;
+  color: #6b7280;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .game-cards,
+  .category-list {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+}
