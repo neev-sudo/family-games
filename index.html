@@ -13,7 +13,8 @@
   </header>
 
   <main class="container">
-    <section id="home-screen">
+    <!-- Home screen -->
+    <section id="home-screen" class="screen">
       <h2>Choose a game</h2>
 
       <div class="game-cards">
@@ -31,7 +32,8 @@
       </div>
     </section>
 
-    <section id="setup-screen" class="hidden">
+    <!-- Game setup screen -->
+    <section id="setup-screen" class="screen hidden">
       <button id="back-button" class="secondary-button">← Back</button>
 
       <h2 id="selected-game-title"></h2>
@@ -48,10 +50,39 @@
       >
 
       <button id="start-button" class="primary-button">
-        Start setup
+        Continue to lobby
       </button>
 
       <p id="setup-message" class="message"></p>
+    </section>
+
+    <!-- Lobby screen -->
+    <section id="lobby-screen" class="screen hidden">
+      <button id="lobby-back-button" class="secondary-button">
+        ← Back to setup
+      </button>
+
+      <h2>Game lobby</h2>
+
+      <p>
+        Game:
+        <strong id="lobby-game-name"></strong>
+      </p>
+
+      <div class="room-card">
+        <p>Room code</p>
+        <strong id="room-code">ABC123</strong>
+        <small>Share this code with the other players.</small>
+      </div>
+
+      <h3>Players</h3>
+      <ul id="players-list" class="players-list"></ul>
+
+      <button id="demo-start-button" class="primary-button">
+        Start demo round
+      </button>
+
+      <p id="lobby-message" class="message"></p>
     </section>
   </main>
 
@@ -59,6 +90,6 @@
     <p>Family Games prototype</p>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
